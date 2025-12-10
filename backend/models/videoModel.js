@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const videoSchema = new mongoose.Schema({
     course: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Course",
+        ref: "course",
         required: true
     },
     title: {
@@ -19,6 +19,6 @@ const videoSchema = new mongoose.Schema({
     }
 }, {timestamps: true});
 
-const videoModel = new mongoose.model("Video", videoSchema);
+const videoModel = new mongoose.model("video", videoSchema);
 
 export default videoModel;

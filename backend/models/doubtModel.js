@@ -3,12 +3,12 @@ import mongoose from "mogoose";
 const doubtSchema = new mongoose.Schema({
     course: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Course",
+        ref: "course",
         required: true
     },
     author: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "user",
         required: true
     },
     text: {
@@ -17,7 +17,11 @@ const doubtSchema = new mongoose.Schema({
     },
     parentComment: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Comment",
+        ref: "doubt",
         default: null
     }
 }, {timestamps: true});
+
+const doubtModel = new mongoose.model("doubt", doubtSchema);
+
+export default doubtModel;

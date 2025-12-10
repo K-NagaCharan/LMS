@@ -19,7 +19,7 @@ const courseSchema = new mongoose.Schema({
     },
     teacher: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
+        ref: "user",
         required: true
     },
     tags: [
@@ -28,6 +28,6 @@ const courseSchema = new mongoose.Schema({
 
 }, {timestamps: true});
 
-const courseModel = new mongoose.model("Course", courseSchema);
+const courseModel = new mongoose.model("course", courseSchema);
 
 export default courseModel;

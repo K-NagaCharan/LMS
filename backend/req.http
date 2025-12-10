@@ -7,3 +7,23 @@ Content-Type: application/json
     "password": "charan",
     "role": "student"
 }
+
+
+###creating new course
+POST http://localhost:8000/api/create-course/teacherid/6938b3e0108488bc83b0e224
+Content-Type: application/json
+
+{
+    "title": "df",
+    "shortDescription": "rftfge",
+    "longDescription": "yttttweihjnw;eiojh",
+    "tags": ["math", "algebra", "beginner"]
+}
+
+
+###adding a new course to a user
+POST http://localhost:8000/api/enroll/userid/6938b5f970c279e9bbc7a168/courseid/6938bc4102a1f5480bcf9896
+
+
+###adding a new course to a user
+GET http://localhost:8000/api/continue-courses/userid/6938b3e0108488bc83b0e224

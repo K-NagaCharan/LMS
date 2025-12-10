@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 const pdfSchema = new mongoose.Schema({
     course: {
         type: mongoose.Schema.Types,ObjectId,
-        ref: "Course",
+        ref: "course",
         required: true
     },
     title: {
@@ -20,6 +20,6 @@ const pdfSchema = new mongoose.Schema({
     }
 }, {timestamp: true});
 
-const pdfModel = new mongoose.model("PDF", pdfSchema);
+const pdfModel = new mongoose.model("pdf", pdfSchema);
 
 export default pdfModel;

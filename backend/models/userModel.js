@@ -19,14 +19,14 @@ const userSchema = new mongoose.Schema({
         required: true,
         enum:["student", "teacher"]
     },
-    completedCources: [
+    courses: [
         {
             type: mongoose.Schema.Types.ObjectId,
-            ref: "Course"
+            ref: "course"
         }
     ]},{ timestamps: true });
 
 
-const userModel = new mongoose.model("User", userSchema);
+const userModel = new mongoose.model("user", userSchema);
 
 export default userModel;

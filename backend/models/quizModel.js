@@ -15,7 +15,7 @@ const questionSchema = new mongoose.Schema({
     }
 });
 
-export const questionModel = new mongoose.model("Question", questionSchema);
+export const questionModel = new mongoose.model("question", questionSchema);
 
 const quizSchema = new mongoose.Schema({
     title: {
@@ -28,4 +28,4 @@ const quizSchema = new mongoose.Schema({
     }
 });
 
-export const quizModel = new mongoose.model("Quiz", quizSchema);
+export const quizModel = new mongoose.model("quiz", quizSchema);
